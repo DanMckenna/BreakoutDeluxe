@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Breakout Deluxe</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Reference to the external .css file which contains all of the styles for the webpage -->
+  </head>
+  <body>
+    <!-- The below canvas element will contain the game -->
+    <!-- Style definitions for the game are located in the external css file -->
+    <!-- Logic for the game is located in the external JavaScript file -->
+    <canvas id="gameCanvas" width="480" height="320"></canvas>
+
+    <button id="runButton">Start game</button>
+
+    <!-- Reference to the external .js file which contains all of the JavaScript for the webpage -->
+    <!-- This reference must be added after the canvas object has been created -->
+    <!-- Having the JavaScript attempt to access the canvas before it exists will result in an error -->
+    <script src="scripts.js"></script>
+  </body>
+</html>
