@@ -6,16 +6,49 @@
     <link rel="stylesheet" href="styles.css"> <!-- Reference to the external .css file which contains all of the styles for the webpage -->
   </head>
   <body>
+    <!-- Page header text -->
+    <h1>Breakout DELUXE</h1>
+
     <!-- The below canvas element will contain the game -->
     <!-- Style definitions for the game are located in the external css file -->
     <!-- Logic for the game is located in the external JavaScript file -->
     <canvas id="gameCanvas" width="480" height="320"></canvas>
 
+    <!-- Pressing this button begis the game logic -->
     <button id="runButton">Start game</button>
 
     <!-- Reference to the external .js file which contains all of the JavaScript for the webpage -->
     <!-- This reference must be added after the canvas object has been created -->
     <!-- Having the JavaScript attempt to access the canvas before it exists will result in an error -->
     <script src="scripts.js"></script>
+
+    <!-- A div containing all of the description text -->
+    <div class="descriptionContainer">
+      <!-- Heading text for the game description -->
+      <h3 class="headingText">About the game</h3>
+
+      <!-- Text explaining how the game was made -->
+      <p class="descriptionText">A re-creation of the game "Breakout" using HTML, CSS, and JS</p><br>
+
+      <!-- Heading text for the game rules -->
+      <h3 class="headingText">How to play</h3>
+
+      <!-- Text explaining how to play the game -->
+      <p class="descriptionText">
+        Press the "start" button to begin the game.
+        Use the paddle to bounce the ball and break the bricks at the top of the screen.
+        Be careful, don't let the ball fall off the screen or else you'll lose a life.
+        Break all of the bricks to win the game.
+        Lose all of your lives and its GAME OVER.</p><br>
+      
+      <!-- Heading text for the controls -->
+      <h3 class="headingText">Controls</h3>
+
+      <!-- Text explaining the controls -->
+      <p class="descriptionText">
+        Keyboard: Use the left and right arrow keys to move the paddle<br>
+        Mouse: Move your mouse from side to side to move the paddle
+      </p><br>
+    </div>
   </body>
 </html>
