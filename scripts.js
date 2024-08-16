@@ -48,6 +48,7 @@ let lives = 3; //represents the total number of remaining lives
 document.addEventListener("keydown", keyDownHandler, false); //add an event listener to detect when the user presses down a key on their keyboard
 document.addEventListener("keyup", keyUpHandler, false); //add an event listener to detect when the releases a key on their keyboard
 document.addEventListener("mousemove", mouseMoveHandler, false); //add an event listener for mouse movement
+document.addEventListener("touchmove", touchMoveHandler, false); //add an event listener for touch input
 
 //a function that uses the keyDownHandler event listener to detect if the left or right keyboard arrows have been pressed and return true if so
 function keyDownHandler(e) {
@@ -70,6 +71,14 @@ function keyUpHandler(e) {
 //a function that uses the mouseMoveHandler event listener to detect if the position of the mouse cursor relative to the position of the paddle on the canvas
 function mouseMoveHandler(e) {
     const relativeX = e.clientX - gameCanvasElement.offsetLeft;
+    if (relativeX > 0 && relativeX < gameCanvasElement.width) {
+        paddleXcoordinate = relativeX - paddleWidth / 2;
+    }
+}
+
+//a function that uses the touchMoveHandler event listener to detect touch input and move the paddle relative to the touched portion on the canvas
+function touchMoveHandler(e) {
+    const relativeX = e.changedTouches[0].clientX - gameCanvasElement.offsetLeft;
     if (relativeX > 0 && relativeX < gameCanvasElement.width) {
         paddleXcoordinate = relativeX - paddleWidth / 2;
     }

@@ -15,6 +15,7 @@ canvas {
     background: #eee;
     display: block;
     margin: 0 auto;
+    touch-action: none; /* this prevents touch input within the canvas from shifting the entire screen */
 }
 
 button {
